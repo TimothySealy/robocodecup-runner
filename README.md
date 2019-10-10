@@ -10,19 +10,24 @@ This script can be used to run robocode battles for a set of teams. The scripts 
 You need to have docker installed on your system.
 
 ## Download and setup
-- Clone the repo and run
+- Clone the repo and run. Use the command:
 
-  ```git clone <ROBOCODE-RUNNER-GIT-REPO-URL>```
-- Create a docker image based on the given Dockerfile. Use the command
+  ```git clone https://github.com/TimothySealy/robocodecup-runner```
+  
+- Create a docker image based on the given Dockerfile. Use the command:
 
   ```docker build -t robocoderunner .```
 
-- Run the docker image
+- Create a working folder to store the results (localy) of the robocode runner container. For example:
+
+  ```mkdir ~/robocode-runner-workingfolder```
+  
+- Run the docker image. Use the command:
 
   ```docker run -dit -v <YOUR-WORKING-FOLDER>:/robocode/workingfolder --name robocode-runner robocoderunner```
 
 ## Running the script
-- Start the script with the following command
+- Start the script with the following command:
 
   ```node index.js -w <ABSOLUTE-PATH-TO-YOUR-WORKING-FOLDER> -t <YOUR-TEAM-FOLDER>```
 
