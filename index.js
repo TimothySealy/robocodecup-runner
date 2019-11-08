@@ -262,7 +262,7 @@ var runBattles = function(folder, container, count) {
                     logFile.write('      Error in running command. Takes to long. Going to the next one\n');
                 }
 
-                bar.tick(1);
+                //bar.tick(1);
             }
         }
     })().done(function() {
